@@ -1,71 +1,71 @@
 Name	Ingredients	MaxPrice	MaxServing	EfficiencyScore
-Tomato Egg Soup	2 Grade A Egg, 2 Cherry Tomato, 1 Black Pepper	1406	12	9924.70588235294
-Great Spider Crab Curry	1 Spider Crab, 1 Grade A Egg, 1 Curry Block	1480	9	8879.999999999998
-Three-Colored Squid Roast	3 Peacock Squid, 3 Vampire Squid, 3 Cuttlefish, 1 Salt	1480	12	8072.727272727272
-Dried Stingray	3 Starry Skate, 3 Stingray Meat, 3 Marbled Electric Ray Meat, 1 Salt	1480	12	8072.727272727272
-Crimson Fish Roll	3 Clown Frogfish, 3 Red Bream, 3 Rhinochimaeridae	1480	9	7010.526315789473
-Godzilla vs. Ebirah Curry	2 European Lobster, 2 Moray Eel, 1 Turmeric, 1 Olive Oil	1369	9	6845.0
-Fried Tomato and Snailfish	3 Gelatinous Snailfish, 3 Salmon Snailfish, 2 Bean, 2 Cherry Tomato	1443	12	6184.285714285714
-Lobster Platter	2 American Lobster, 2 Tropical Rock Lobster, 2 Tokummia Katalepsis	1609	6	6033.750000000001
-Pelican Eel Jelly	3 Pelican Eel, 1 Black Vinegar, 1 Agar	1380	9	5914.285714285714
-Shark Karaage	3 Blacktip Shark Meat, 3 Copper Shark Meat, 1 Wheat, 1 Olive Oil	1480	9	5550.0
-Fried Rice with Sally Lightfoot Crab	2 Sally Lightfoot Crab, 2 Rice, 1 Grade A Egg, 1 Black Pepper	1424	10	5476.923076923077
-Boiled Porbeagle Shark	3 Porbeagle Shark Meat, 1 Black Vinegar, 1 Black Pepper	1480	7	5452.631578947368
-Dumbo Takoyaki	3 Dumbo Octopus, 2 Wheat, 1 Mayonnaise	1554	9	5379.23076923077
-Pufferfish Dumpling Soup	3 Longspine Porcupinefish, 3 Starry Puffer, 1 Egg, 1 Bladderwrack	1554	9	5379.230769230769
-Ice Fish Curry	3 Ice Fish, 2 Bean, 1 Curry Block	1480	9	5123.076923076924
-Soy Sauce Marinated Crab	2 Golden King Crab, 2 Snow Crab, 2 Horsehair Crab, 1 Soy Sauce	1609	6	5081.0526315789475
-Narwhal Miso Soup	3 Narwhal Meat, 2 Carrot, 2 Buckbean, 1 Miso	1480	12	4933.333333333334
-Marlin and Soybean Paste Roast	3 Marlin Meat, 2 Garlic, 1 Miso	1406	9	4866.923076923078
-Roasted Capelin	5 Capelin, 1 Black Coral, 1 Turmeric	1443	7	4810.0
-Blobfish Spring Roll	3 Blobfish, 2 Wheat, 1 Mayonnaise, 1 Sesame Seed	1387	10	4782.758620689656
-Grilled Eel with Habanero	2 Snub-nosed Spiny Eel, 2 Habanero, 1 Kajime, 1 Soy Sauce	1572	9	4716.0
-Dusky Grouper Steak	5 Dusky Grouper, 3 Cherry Tomato, 1 Salt, 1 Olive Oil	1480	7	4316.666666666667
-Mianbao Xia	5 Black Tiger Shrimp, 5 Whiteleg Shrimp, 2 Wheat, 1 Olive Oil	1387	10	4203.030303030303
-Pikaia Ramen	3 Pikaia, 1 Grade A Egg, 2 Wheat, 3 Southern Bull Kelp	1554	10	3984.6153846153843
-Boiled Sailfish and Seaweed	3 Sailfish Meat, 2 Southern Bull Kelp, 2 Kajime, 1 Soy Sauce	1572	9	3930.0000000000005
-Great Barracuda Canape	5 Great Barracuda, 1 Cherry Tomato, 1 Onion, 1 Mayonnaise	1572	6	3930.0
-Latok Omelet	1 Grade A Egg, 2 Rice, 2 Sea Grape, 1 Soy Sauce	1480	9	3917.6470588235297
-Crystal Lobster Roll	2 Crystal Lobster, 2 Rice, 2 Bladderwrack	1369	9	3850.3125
-Rice with White Shrimp Meat	3 White Shrimp, 2 Rice, 2 Egg, 1 Soy Sauce	1480	9	3700.0000000000005
-Tropical Fish Sushi Set	3 Titan Triggerfish, 3 Harlequin Hind, 3 Coral Trout, 3 Rice	1387	9	3671.4705882352937
-Deep Fish Tempura	1 Cookiecutter Shark, 1 Vampire Squid, 1 Barreleye, 3 Kelp	1461	7	3652.4999999999995
-Sweet and Sour Stargazer	1 Bluespotted Stargazer, 1 Wheat, 1 Egg, 1 Olive Oil	1443	6	3607.5
-Fried Habanero Fangtooth	2 Fangtooth, 2 Habanero, 1 Bladderwrack, 1 Olive Oil	1517	7	3539.6666666666665
-Humboldt Ink Pasta	1 Humboldt Squid Meat, 3 White Shrimp, 3 Wheat, 3 Garlic	1554	10	3531.8181818181815
-Atlantic Bonito Curry	5 Atlantic Bonito, 2 Carrot, 1 Curry Block	1406	7	3515.0
-Stir-fried Habanero Lobster	2 Norway Lobster, 2 Habanero, 1 Olive Oil	1443	6	3463.2
-Roasted Tropical Fish and Garlic	5 Clownfish, 5 Pyramid Butterflyfish, 5 Blue Tang, 3 Garlic	1480	9	3330.0
-Seaweed Rolled Omelet	1 Grade A Egg, 3 Seaweed, 3 Kelp	1480	9	3248.7804878048782
-Humphead Parrotfish Curry	5 Green Humphead Parrotfish, 2 Onion, 1 Turmeric	1387	6	3200.7692307692305
-Wrasse Curry	5 Rainbow Wrasse, 5 Ornate Wrasse, 1 Bean, 1 Curry Block	1480	6	3171.4285714285716
-Seahorse Salad	3 Long-Snouted Seahorse, 2 Cherry Tomato, 2 Sea Grape, 1 Olive Oil	1480	6	3171.4285714285716
-Mackerel Scad Hotdog	5 Mackerel Scad, 2 Wheat, 1 Mayonnaise	1480	6	3171.4285714285716
-Steamed Eastern Rock Lobster & Egg	2 Eastern Rock Lobster, 2 Egg, 2 Kelp	1406	7	3075.625
-Black Vinegar Braised Parrotfish	5 Mediterranean Parrotfish, 2 Carrot, 1 Black Vinegar	1424	6	3051.4285714285716
-Deep-Fried Eggplant Shrimp Meatballs	3 Black Tiger Shrimp, 3 Whiteleg Shrimp, 3 Eggplant, 1 Olive Oil	1480	7	3047.0588235294117
-Peacock Squid Ripieni	3 Peacock Squid, 2 Egg, 2 Garlic, 1 Black Pepper	1517	7	2949.7222222222226
-Trevally Nanbanzuke	5 White Trevally, 3 Onion, 1 Soy Sauce, 1 Olive Oil	1480	7	2877.7777777777783
-Fried Onion Cuttlefish	5 Cuttlefish, 3 Onion, 1 Olive Oil, 1 Salt	1480	7	2877.7777777777783
-Hot Pepper Tuna	3 Bluefin Tuna Chutoro, 2 Habanero, 2 Sea Grape, 1 Sesame Seed	1461	7	2840.8333333333335
-Seasoned Waptia Fieldensis	3 Waptia Fieldensis, 2 Cucumber, 3 Black Coral, 1 Black Vinegar	1572	7	2683.9024390243903
-Batfish Ricebowl	5 Longfin Batfish, 5 Orbicular Batfish, 2 Rice, 2 Egg	1480	7	2590.0
-Smoked Atlantic Mackerel Scramble	5 Atlantic Mackerel, 2 Wheat, 2 Egg	1431	6	2453.1428571428573
-Falcatus Soybean Paste Soup	3 Falcatus, 3 Seaweed, 3 Buckbean, 1 Miso	1554	7	2364.7826086956525
+Tomato Egg Soup	2 Grade A Egg, 2 Cherry Tomato, 1 Black Pepper	1406	12	11247.999999999998
+Dried Stingray	3 Starry Skate, 3 Stingray Meat, 3 Marbled Electric Ray Meat, 1 Salt	1480	12	10148.57142857143
+Three-Colored Squid Roast	3 Peacock Squid, 3 Vampire Squid, 3 Cuttlefish, 1 Salt	1480	12	10148.57142857143
+Great Spider Crab Curry	1 Spider Crab, 1 Grade A Egg, 1 Curry Block	1480	9	9514.285714285714
+Crimson Fish Roll	3 Clown Frogfish, 3 Red Bream, 3 Rhinochimaeridae	1480	9	9186.206896551726
+Godzilla vs. Ebirah Curry	2 European Lobster, 2 Moray Eel, 1 Turmeric, 1 Olive Oil	1369	9	7949.032258064515
+Lobster Platter	2 American Lobster, 2 Tropical Rock Lobster, 2 Tokummia Katalepsis	1609	6	7426.153846153845
+Fried Tomato and Snailfish	3 Gelatinous Snailfish, 3 Salmon Snailfish, 2 Bean, 2 Cherry Tomato	1443	12	7215.0
+Pelican Eel Jelly	3 Pelican Eel, 1 Black Vinegar, 1 Agar	1380	9	6369.2307692307695
+Shark Karaage	3 Blacktip Shark Meat, 3 Copper Shark Meat, 1 Wheat, 1 Olive Oil	1480	9	6342.857142857144
+Pufferfish Dumpling Soup	3 Longspine Porcupinefish, 3 Starry Puffer, 1 Egg, 1 Bladderwrack	1554	9	6080.869565217392
+Soy Sauce Marinated Crab	2 Golden King Crab, 2 Snow Crab, 2 Horsehair Crab, 1 Soy Sauce	1609	6	6033.749999999999
+Boiled Porbeagle Shark	3 Porbeagle Shark Meat, 1 Black Vinegar, 1 Black Pepper	1480	7	5920.0
+Fried Rice with Sally Lightfoot Crab	2 Sally Lightfoot Crab, 2 Rice, 1 Grade A Egg, 1 Black Pepper	1424	10	5812.2448979591845
+Dumbo Takoyaki	3 Dumbo Octopus, 2 Wheat, 1 Mayonnaise	1554	9	5708.571428571429
+Roasted Capelin	5 Capelin, 1 Black Coral, 1 Turmeric	1443	7	5611.666666666667
+Ice Fish Curry	3 Ice Fish, 2 Bean, 1 Curry Block	1480	9	5436.734693877552
+Dusky Grouper Steak	5 Dusky Grouper, 3 Cherry Tomato, 1 Salt, 1 Olive Oil	1480	7	5180.0
+Marlin and Soybean Paste Roast	3 Marlin Meat, 2 Garlic, 1 Miso	1406	9	5164.897959183674
+Narwhal Miso Soup	3 Narwhal Meat, 2 Carrot, 2 Buckbean, 1 Miso	1480	12	5147.826086956522
+Blobfish Spring Roll	3 Blobfish, 2 Wheat, 1 Mayonnaise, 1 Sesame Seed	1387	10	5043.636363636365
+Mianbao Xia	5 Black Tiger Shrimp, 5 Whiteleg Shrimp, 2 Wheat, 1 Olive Oil	1387	10	4953.571428571428
+Grilled Eel with Habanero	2 Snub-nosed Spiny Eel, 2 Habanero, 1 Kajime, 1 Soy Sauce	1572	9	4878.620689655173
+Great Barracuda Canape	5 Great Barracuda, 1 Cherry Tomato, 1 Onion, 1 Mayonnaise	1572	6	4491.428571428572
+Tropical Fish Sushi Set	3 Titan Triggerfish, 3 Harlequin Hind, 3 Coral Trout, 3 Rice	1387	9	4231.525423728814
+Pikaia Ramen	3 Pikaia, 1 Grade A Egg, 2 Wheat, 3 Southern Bull Kelp	1554	10	4200.0
+Boiled Sailfish and Seaweed	3 Sailfish Meat, 2 Southern Bull Kelp, 2 Kajime, 1 Soy Sauce	1572	9	4100.869565217392
+Roasted Tropical Fish and Garlic	5 Clownfish, 5 Pyramid Butterflyfish, 5 Blue Tang, 3 Garlic	1480	9	4098.461538461538
+Latok Omelet	1 Grade A Egg, 2 Rice, 2 Sea Grape, 1 Soy Sauce	1480	9	3976.119402985075
+Crystal Lobster Roll	2 Crystal Lobster, 2 Rice, 2 Bladderwrack	1369	9	3974.516129032258
+Wrasse Curry	5 Rainbow Wrasse, 5 Ornate Wrasse, 1 Bean, 1 Curry Block	1480	6	3860.8695652173915
+Rice with White Shrimp Meat	3 White Shrimp, 2 Rice, 2 Egg, 1 Soy Sauce	1480	9	3860.8695652173915
+Atlantic Bonito Curry	5 Atlantic Bonito, 2 Carrot, 1 Curry Block	1406	7	3859.6078431372553
+Deep Fish Tempura	1 Cookiecutter Shark, 1 Vampire Squid, 1 Barreleye, 3 Kelp	1461	7	3859.245283018867
+Humboldt Ink Pasta	1 Humboldt Squid Meat, 3 White Shrimp, 3 Wheat, 3 Garlic	1554	10	3700.0
+Sweet and Sour Stargazer	1 Bluespotted Stargazer, 1 Wheat, 1 Egg, 1 Olive Oil	1443	6	3684.255319148937
+Fried Habanero Fangtooth	2 Fangtooth, 2 Habanero, 1 Bladderwrack, 1 Olive Oil	1517	7	3661.7241379310344
+Humphead Parrotfish Curry	5 Green Humphead Parrotfish, 2 Onion, 1 Turmeric	1387	6	3618.2608695652175
+Stir-fried Habanero Lobster	2 Norway Lobster, 2 Habanero, 1 Olive Oil	1443	6	3607.5
+Seahorse Salad	3 Long-Snouted Seahorse, 2 Cherry Tomato, 2 Sea Grape, 1 Olive Oil	1480	6	3482.3529411764707
+Mackerel Scad Hotdog	5 Mackerel Scad, 2 Wheat, 1 Mayonnaise	1480	6	3482.3529411764707
+Black Vinegar Braised Parrotfish	5 Mediterranean Parrotfish, 2 Carrot, 1 Black Vinegar	1424	6	3350.588235294118
+Deep-Fried Eggplant Shrimp Meatballs	3 Black Tiger Shrimp, 3 Whiteleg Shrimp, 3 Eggplant, 1 Olive Oil	1480	7	3341.9354838709683
+Seaweed Rolled Omelet	1 Grade A Egg, 3 Seaweed, 3 Kelp	1480	9	3288.888888888889
+Steamed Eastern Rock Lobster & Egg	2 Eastern Rock Lobster, 2 Egg, 2 Kelp	1406	7	3174.838709677419
+Trevally Nanbanzuke	5 White Trevally, 3 Onion, 1 Soy Sauce, 1 Olive Oil	1480	7	3092.537313432836
+Fried Onion Cuttlefish	5 Cuttlefish, 3 Onion, 1 Olive Oil, 1 Salt	1480	7	3092.537313432836
+Peacock Squid Ripieni	3 Peacock Squid, 2 Egg, 2 Garlic, 1 Black Pepper	1517	7	3077.971014492754
+Hot Pepper Tuna	3 Bluefin Tuna Chutoro, 2 Habanero, 2 Sea Grape, 1 Sesame Seed	1461	7	2964.347826086957
+Batfish Ricebowl	5 Longfin Batfish, 5 Orbicular Batfish, 2 Rice, 2 Egg	1480	7	2960.0
+Seasoned Waptia Fieldensis	3 Waptia Fieldensis, 2 Cucumber, 3 Black Coral, 1 Black Vinegar	1572	7	2785.822784810127
+Smoked Atlantic Mackerel Scramble	5 Atlantic Mackerel, 2 Wheat, 2 Egg	1431	6	2641.846153846154
+Seasoned Jellyfish	5 Barrel Jellyfish, 5 Fried Egg Jellyfish, 2 Garlic, 2 Black Coral	1480	6	2537.1428571428573
+Comber Sandwich	5 Comber, 5 Painted Comber, 2 Egg, 2 Wheat	1443	6	2473.714285714286
+Deep-Fried Red Lionfish	5 Red Lionfish, 1 Wheat, 1 Olive Oil, 1 Black Pepper	1443	4	2456.170212765958
+Truffle Blue Lobster Tail Sushi	2 Blue Lobster, 1 Truffle	1716	2	2451.428571428571
+Falcatus Soybean Paste Soup	3 Falcatus, 3 Seaweed, 3 Buckbean, 1 Miso	1554	7	2444.4943820224717
+Narrow-barred Spanish Mackerel Arancini	5 Narrow-Barred Spanish Mackerel, 2 Egg, 2 Rice, 2 Garlic	1443	7	2376.705882352941
+Rice with Purple Sea Urchin Sushi	2 Purple Sea Urchin, 2 Rice, 1 Sesame Seed	1424	4	2373.3333333333335
 Nasu Dengaku	1 Eggplant, 1 Garlic, 1 Olive Oil, 1 Miso	1535	4	2361.538461538462
-Truffle Blue Lobster Tail Sushi	2 Blue Lobster, 1 Truffle	1716	2	2288.0
-Rice with Purple Sea Urchin Sushi	2 Purple Sea Urchin, 2 Rice, 1 Sesame Seed	1424	4	2278.4
-Narrow-barred Spanish Mackerel Arancini	5 Narrow-Barred Spanish Mackerel, 2 Egg, 2 Rice, 2 Garlic	1443	7	2244.6666666666665
-Deep-Fried Red Lionfish	5 Red Lionfish, 1 Wheat, 1 Olive Oil, 1 Black Pepper	1443	4	2220.0000000000005
-Seasoned Jellyfish	5 Barrel Jellyfish, 5 Fried Egg Jellyfish, 2 Garlic, 2 Black Coral	1480	6	2220.0
-Plotosid Pie	5 Striped Catfish, 2 Wheat, 2 Onion, 2 Bean	1424	7	2215.1111111111113
-Comber Sandwich	5 Comber, 5 Painted Comber, 2 Egg, 2 Wheat	1443	6	2164.5
-Seahorse Udon	3 Long-Snouted Seahorse, 2 Wheat, 1 Miso	1387	4	2133.8461538461543
-Truffle Sailfish Tartare	3 Sailfish Meat, 3 Purple Sea Urchin, 1 Truffle	1727	2	1817.8947368421052
-Truffle Shark Sandwich	3 Frilled Shark Meat, 3 Megamouth Shark Meat, 1 Truffle	1705	2	1794.7368421052631
-Grilled Antarctic Octopus & Truffle	3 Antarctic Octopus, 3 Kajime, 1 Truffle	1694	2	1092.9032258064517
-Boiled Asian Sheepshead Wrasse & Truffle	3 Sheepshead Meat, 3 Kelp, 1 Truffle	1661	2	1071.6129032258066
-Hyalonema Tuna Sashimi	3 Bluefin Tuna Ootoro, 3 Yellowfin Tuna Ootoro, 2 Hyalonema	1683	1	647.3076923076923
-Special Fried Shrimp Sushi	2 Black Tiger Shrimp, 2 Whiteleg Shrimp, 1 Rice, 1 Olive Oil	1406	1	639.0909090909091
-Steamed Hyalonema Angler Fish	3 Atlantic Anglerfish, 2 Hyalonema, 1 Soy Sauce	1650	1	634.6153846153848
+Plotosid Pie	5 Striped Catfish, 2 Wheat, 2 Onion, 2 Bean	1424	7	2345.4117647058824
+Seahorse Udon	3 Long-Snouted Seahorse, 2 Wheat, 1 Miso	1387	4	2264.4897959183677
+Truffle Sailfish Tartare	3 Sailfish Meat, 3 Purple Sea Urchin, 1 Truffle	1727	2	2158.75
+Truffle Shark Sandwich	3 Frilled Shark Meat, 3 Megamouth Shark Meat, 1 Truffle	1705	2	2131.25
+Grilled Antarctic Octopus & Truffle	3 Antarctic Octopus, 3 Kajime, 1 Truffle	1694	2	1148.4745762711866
+Boiled Asian Sheepshead Wrasse & Truffle	3 Sheepshead Meat, 3 Kelp, 1 Truffle	1661	2	1126.1016949152543
+Hyalonema Tuna Sashimi	3 Bluefin Tuna Ootoro, 3 Yellowfin Tuna Ootoro, 2 Hyalonema	1683	1	731.7391304347826
+Special Fried Shrimp Sushi	2 Black Tiger Shrimp, 2 Whiteleg Shrimp, 1 Rice, 1 Olive Oil	1406	1	703.0
+Steamed Hyalonema Angler Fish	3 Atlantic Anglerfish, 2 Hyalonema, 1 Soy Sauce	1650	1	673.4693877551022
 Vegetable Sushi	1 Rice, 1 Carrot, 1 Eggplant	1387	1	554.8
