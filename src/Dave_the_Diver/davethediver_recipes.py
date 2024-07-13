@@ -1,6 +1,5 @@
 import pandas as pd
 
-# Example data in the format provided
 data = [
     ["Truffle Sailfish Tartare", 785, 1727, 195, 295, 2, 2, "3 Sailfish Meat, 3 Purple Sea Urchin, 1 Truffle", "Jango", None],
     ["Truffle Blue Lobster Tail Sushi", 780, 1716, 190, 282, 2, 2, "2 Blue Lobster, 1 Truffle", "Jango", None],
@@ -72,54 +71,33 @@ data = [
     ["Pelican Eel Jelly", 373, 1380, 151, 439, 6, 9, "3 Pelican Eel, 1 Black Vinegar, 1 Agar", "Complete Whose Fried food is the Best?", 7],
     ["Crystal Lobster Roll", 370, 1369, 170, 305, 6, 9, "2 Crystal Lobster, 2 Rice, 2 Bladderwrack", None, 9],
     ["Godzilla vs. Ebirah Curry", 370, 1369, 140, 365, 6, 9, "2 European Lobster, 2 Moray Eel, 1 Turmeric, 1 Olive Oil", "Complete Go to Bancho Sushi", None],
-    ["Blanched Lusca Tentacle", 1350, 1350, 250, 250, 10, 10, "1 Lusca Tentacle, 1 Salt, 1 Olive Oil", "Defeat Lusca", 1],
-    ["Lusca Neck Tadaki", 1350, 1350, 250, 250, 10, 10, "1 Lusca Neck Meat, 1 Mayonnaise, 1 Soy Sauce, 1 Sesame Seed", "Defeat Lusca", 1],
-    ["Bluefin Tuna Rice Bowl", 360, 1332, 130, 400, 6, 9, "3 Bluefin Tuna Akami, 3 Rice, 1 Egg, 1 Sesame Seed", "Seasonal Event: Tuna Party", 5],
-    ["Deep Sea Kaiju Ramen", 350, 1295, 140, 410, 4, 6, "5 Comb Jelly, 3 Seaweed, 1 Miso", "Complete Go to Bancho Sushi", None],
-    ["Ebirah Chasing Sashimi", 340, 1258, 130, 382, 6, 9, "2 California Spiny Lobster, 3 Barreleye, 2 Sea Grape", "Complete Go to Bancho Sushi", None],
-    ["Gazing Shark Sushi", 1250, 1250, 3, 3, 1, 1, "1 Gazing Shark", "Gazing Shark", None],
-    ["Translucent Sturgeon Sushi", 1235, 1235, 3, 3, 1, 1, "1 Translucent Sturgeon", "Translucent Sturgeon", None],
-    ["Bloodskin Shark Sushi", 1225, 1225, 4, 4, 1, 1, "1 Bloodskin Shark", "Bloodskin Shark", None],
-    ["Great Spider Crab and Cucumber Sushi", 324, 1198, 160, 385, 1, 1, "1 Spider Crab, 1 Cucumber", "Seasonal Event: Cucumber Party", 5],
-    ["Sea Toad and Cucumber Gunkan Sushi", 320, 1184, 160, 367, 1, 1, "1 Sea Toad, 1 Cucumber", "Seasonal Event: Cucumber Party", 5],
-    ["Skewered Cucumber", 320, 1184, 160, 340, 1, 1, "3 Cucumber", "Seasonal Event: Cucumber Party", None],
-    ["Pickled Vegetables", 316, 1169, 157, 364, 2, 3, "1 Cucumber, 1 Eggplant, 1 Carrot, 1 Black Vinegar", "Seasonal Event: Cucumber Party", None],
-    ["Deep-Fried Vegetables", 312, 1154, 153, 396, 2, 3, "1 Cucumber, 1 Onion, 1 Carrot, 1 Olive Oil", "Seasonal Event: Cucumber Party", None],
-    ["Trevally Sandwich", 312, 1154, 170, 260, 5, 7, "5 Giant Trevally Meat, 5 Bigeye Trevally, 2 Cucumber", "Seasonal Event: Cucumber Party", 5],
-    ["Yellowfin Tuna Steak", 305, 1128, 125, 332, 6, 9, "3 Yellowfin Tuna Chutoro, 3 Cherry Tomato, 1 Olive Oil", "Seasonal Event: Tuna Party", 5],
-    ["Sprouting Eel Sushi", 1040, 1040, 4, 4, 1, 1, "1 Sprouting Eel", "Sprouting Eel", None],
-    ["Sallow Sailfish Sushi", 1000, 1000, 5, 5, 1, 1, "1 Sallow Sailfish", "Sallow Sailfish", None],
 ]
 
-# Create DataFrame
+Farm_Ingredients = ["Wheat", "Carrot", "Onion", "Cherry Toamto", "Bean", "Eggplant", "Garlic", "Rice", "Habanero", "Cucumber", "Egg", "Agar", "Kajime", "Seaweed", "Kelp", "Sea Grape", "Black Coral", "Southern Bull Kelp", "Buckbean", "Bladderwrack", "Hyalonema"]
+Spices = ["Soy Sauce", "Black Vinegar", "Olive Oil", "Black Pepper", "Mayonnaise", "Curry Block", "Tumeric", "Salt", "Miso", "Sesame Seed", "Truffle"]
+
 df = pd.DataFrame(data, columns=[
     'Name', 'BasePrice', 'MaxPrice', 'BaseTaste', 'MaxTaste',
     'BaseServing', 'MaxServing', 'Ingredients', 'AcquirementMethod', 'ArtisanFlameCost'
 ])
 
-# List of non-breedable ingredients
-non_breedable_ingredients = [
-    'Blue Spotted Stargazers', 'Spider Crabs', 'Sally Lightfoot Crabs',
-    'Sea Urchins', 'Seahorses', 'Seadragons', 'Seascorpions (Megaloraptor)'
-]
+def calculate_efficiency_score(row):
+    max_price_serving = row['MaxPrice'] * row['MaxServing']
+    farm_ingredients_count = 1
+    for ingredients in row['Ingredients'].split(', '):
+        num = int(ingredients[0])
+        if ingredients[2:] in Farm_Ingredients:
+            farm_ingredients_count+=1*num
+        elif ingredients[2:] in Spices:
+            farm_ingredients_count+=0.5*num
+        else:
+            farm_ingredients_count+=0.25*num
+    return max_price_serving / farm_ingredients_count
 
-# Filter out recipes with non-breedable ingredients
-def is_breedable(row):
-    for ingredient in non_breedable_ingredients:
-        if ingredient in row['Ingredients']:
-            return False
-    return True
+df['EfficiencyScore'] = df.apply(calculate_efficiency_score, axis=1)
 
-df = df[df.apply(is_breedable, axis=1)]
-
-# Only include recipes with a max price of 1000 or higher
-df = df[df['MaxPrice'] >= 1000]
-
-# Calculate the efficiency score
-df['EfficiencyScore'] = (df['MaxPrice'] * df['MaxServing']) / df['Ingredients'].apply(lambda x: sum(1 for ingredient in x.split(', ') if 'egg' in ingredient.lower() or 'farm-grown' in ingredient.lower()))
-
-# Sort by efficiency score in descending order
 df = df.sort_values(by='EfficiencyScore', ascending=False)
 
-# Display the results
-print(df[['Name', 'EfficiencyScore']])
+df[['Name', 'Ingredients', 'MaxPrice', 'MaxServing', 'EfficiencyScore']].to_csv('recipes_efficiency_scores.txt', index=False, sep='\t')
+
+print("Efficiency scores exported to 'recipes_efficiency_scores.txt'")
