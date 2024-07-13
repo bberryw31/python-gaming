@@ -87,11 +87,11 @@ def calculate_efficiency_score(row):
     for ingredients in row['Ingredients'].split(', '):
         num = int(ingredients[0])
         if ingredients[2:] in Farm_Ingredients:
-            farm_ingredients_count+=1*num
-        elif ingredients[2:] in Spices:
             farm_ingredients_count+=0.5*num
+        elif ingredients[2:] in Spices:
+            farm_ingredients_count+=0.3*num
         else:
-            farm_ingredients_count+=0.25*num
+            farm_ingredients_count+=0.1*num
     return max_price_serving / farm_ingredients_count
 
 df['EfficiencyScore'] = df.apply(calculate_efficiency_score, axis=1)
