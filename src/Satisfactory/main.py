@@ -156,56 +156,97 @@ class SatisfactoryOptimizer:
         """Parse miner data"""
         return {m['key_name']: m for m in self.data.get('miners', [])}
 
+    def calculate_production_chain(self, target_item, available_resources=None):
+        """Calculate the production chain for a target item with natural production rates"""
+        # Get the base recipe for the target item
+        if target_item not in self.recipes:
+            return {
+                'target': target_item,
+                'target_rate': 0,
+                'recipes_used': {},
+                'buildings_needed': defaultdict(float),
+                'raw_materials': defaultdict(float),
+                'power_consumption': 0,
+                'warnings': [f"No recipe found for {target_item}"],
+                'production_tree': None
+            }
 
-def calculate_production_chain(self, target_item, available_resources=None):
-    """Calculate the production chain for a target item with natural production rates"""
-    # Get the base recipe for the target item
-    if target_item not in self.recipes:
-        return {
+        # Get the natural output rate of one building
+        base_recipe = self.recipes[target_item]
+        base_output_rate = base_recipe.get_items_per_minute().get(target_item, 0)
+
+        chain = {
             'target': target_item,
-            'target_rate': 0,
+            'target_rate': base_output_rate,
             'recipes_used': {},
             'buildings_needed': defaultdict(float),
             'raw_materials': defaultdict(float),
             'power_consumption': 0,
-            'warnings': [f"No recipe found for {target_item}"],
+            'warnings': [],
             'production_tree': None
         }
 
-    # Get the natural output rate of one building
-    base_recipe = self.recipes[target_item]
-    base_output_rate = base_recipe.get_items_per_minute().get(target_item, 0)
+        # Track items being processed to detect cycles
+        processing_stack = set()
 
-    chain = {
-        'target': target_item,
-        'target_rate': base_output_rate,
-        'recipes_used': {},
-        'buildings_needed': defaultdict(float),
-        'raw_materials': defaultdict(float),
-        'power_consumption': 0,
-        'warnings': [],
-        'production_tree': None
-    }
+        def build_production_tree(item, rate, depth=0, path=None):
+            # Tree building logic here
+            pass
 
-    # Track items being processed to detect cycles
-    processing_stack = set()
+        # Build the production tree starting with natural output rate
+        chain['production_tree'] = build_production_tree(target_item, base_output_rate)
 
-    def build_production_tree(item, rate, depth=0, path=None):
-        # Tree building logic here
-        pass
+        # Calculate resource node requirements if provided
+        if available_resources:
+            chain['resource_nodes_needed'] = self._calculate_resource_nodes(
+                chain['raw_materials'], available_resources)
 
-    # Build the production tree starting with natural output rate
-    chain['production_tree'] = build_production_tree(target_item, base_output_rate)
+        return chain
 
-    # Calculate resource node requirements if provided
-    if available_resources:
-        chain['resource_nodes_needed'] = self._calculate_resource_nodes(
-            chain['raw_materials'], available_resources
-        )
+    def _calculate_resource_nodes(self, raw_materials, available_resources):
+        """Calculate resource node utilization"""
+        nodes_needed = {}
 
-    return chain
+        # Group available resources by type
+        resources_by_type = defaultdict(list)
+        for res in available_resources:
+            resources_by_type[res.resource_type].append(res)
 
+        for material, rate_needed in raw_materials.items():
+            available_nodes = resources_by_type.get(material, [])
 
-def _calculate_resource_nodes(self, raw_materials, available_resources):
-    """Calculate resource node utilization"""
-    # Implementation here
+            if not available_nodes:
+                nodes_needed[material] = {
+                    'required_rate': rate_needed,
+                    'available_rate': 0,
+                    'shortage': rate_needed,
+                    'utilization': 0
+                }
+                continue
+
+            # Calculate total available rate
+            total_available = 0
+            for node in available_nodes:
+                resource_data = self.resources.get(material, {})
+                category = resource_data.get('category', 'mineral')
+
+                if category == 'mineral':
+                    miner_key = f"miner-mk{node.miner_mk}"
+                elif category == 'oil':
+                    miner_key = 'oil-pump'
+                else:
+                    miner_key = f"miner-mk{node.miner_mk}"
+
+                miner = self.miners.get(miner_key, {})
+                base_rate = miner.get('base_rate', 60)
+                node_rate = node.get_output_rate(base_rate)
+                total_available += node_rate
+
+            nodes_needed[material] = {
+                'required_rate': rate_needed,
+                'available_rate': total_available,
+                'shortage': max(0, rate_needed - total_available),
+                'utilization': min(100, (rate_needed / total_available * 100)) if total_available > 0 else 0
+            }
+
+        return nodes_needed
