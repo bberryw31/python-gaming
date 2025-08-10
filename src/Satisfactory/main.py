@@ -250,3 +250,45 @@ class SatisfactoryOptimizer:
             }
 
         return nodes_needed
+
+
+class SatisfactoryGUI:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Satisfactory Factory Optimizer")
+        self.root.geometry("1400x900")
+
+        # Initialize optimizer
+        self.optimizer = SatisfactoryOptimizer('data.json')
+
+        # Store resource nodes
+        self.resource_nodes = []
+
+        # Create UI
+        self.create_widgets()
+
+    def create_widgets(self):
+        """Create all GUI widgets"""
+        # Create notebook for tabs
+        notebook = ttk.Notebook(self.root)
+        notebook.pack(fill='both', expand=True, padx=5, pady=5)
+
+        # Main calculation tab
+        main_tab = ttk.Frame(notebook)
+        notebook.add(main_tab, text='Production Calculator')
+        self.create_main_tab(main_tab)
+
+        # Tree visualization tab
+        tree_tab = ttk.Frame(notebook)
+        notebook.add(tree_tab, text='Production Tree')
+        self.create_tree_tab(tree_tab)
+
+
+def main():
+    root = tk.Tk()
+    app = SatisfactoryGUI(root)
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()
