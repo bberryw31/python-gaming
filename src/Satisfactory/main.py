@@ -1,4 +1,6 @@
 import json
+import tkinter as tk
+from tkinter import ttk, scrolledtext, messagebox
 from dataclasses import dataclass
 from collections import defaultdict
 
@@ -46,13 +48,39 @@ class SatisfactoryOptimizer:
             # Basic materials
             'iron-ore', 'copper-ore', 'limestone', 'coal',
             'caterium-ore', 'raw-quartz', 'sulfur', 'crude-oil',
-            # ... rest of items
+
+            # Basic processed
+            'iron-ingot', 'copper-ingot', 'steel-ingot', 'caterium-ingot',
+            'concrete', 'quartz-crystal', 'silica',
+
+            # Basic parts
+            'iron-plate', 'iron-rod', 'screw', 'wire', 'cable', 'quickwire',
+            'copper-sheet', 'steel-beam', 'steel-pipe',
+
+            # Intermediate parts
+            'reinforced-iron-plate', 'modular-frame', 'rotor', 'stator',
+            'motor', 'encased-industrial-beam',
+
+            # Oil products (Tier 5)
+            'plastic', 'rubber', 'fuel', 'petroleum-coke', 'polymer-resin',
+            'heavy-oil-residue',
+
+            # Electronics (up to Tier 5-6)
+            'circuit-board', 'computer', 'high-speed-connector', 'ai-limiter',
+
+            # Advanced but still mid-game
+            'heavy-modular-frame', 'crystal-oscillator', 'black-powder',
+
+            # Space Elevator items for Phase 1-3
+            'smart-plating', 'versatile-framework', 'automated-wiring',
+            'modular-engine', 'adaptive-control-unit'
         }
 
         try:
             with open(data_path, 'r') as f:
                 self.data = json.load(f)
         except FileNotFoundError:
+            messagebox.showerror("Error", f"Data file '{data_path}' not found!")
             self.data = {"recipes": [], "buildings": [], "resources": [], "miners": [], "items": [], "fluids": []}
 
         self.recipes = self._parse_recipes()
@@ -67,7 +95,54 @@ class SatisfactoryOptimizer:
 
     def _parse_recipes(self):
         """Parse recipes from JSON data, only using primary recipes up to mid-game"""
-        # Implementation here
+        recipes_by_product = {}
+
+        for recipe_data in self.data.get('recipes', []):
+            # Skip alternate recipes
+            if 'alt-' in recipe_data.get('key_name', ''):
+                continue
+
+            # Skip converter, nuclear, and advanced recipes
+            if recipe_data.get('category', '') in ['converting', 'nuke-reacting', 'accelerating', 'encoding']:
+                continue
+
+            ingredients = {ing[0]: ing[1] for ing in recipe_data.get('ingredients', [])}
+            products = {prod[0]: prod[1] for prod in recipe_data.get('products', [])}
+
+            # Skip recipes with late-game materials
+            skip_materials = {
+                'reanimated-sam', 'sam', 'uranium', 'plutonium-pellet',
+                'uranium-waste', 'bauxite', 'aluminum-scrap', 'aluminum-ingot',
+                'battery', 'supercomputer', 'alumina-solution', 'sulfuric-acid',
+                'nitrogen-gas', 'nitric-acid', 'turbofuel', 'aluminum-casing',
+                'alclad-aluminum-sheet', 'radio-control-unit', 'turbo-motor'
+            }
+
+            if any(mat in ingredients for mat in skip_materials):
+                continue
+            if any(mat in products for mat in skip_materials):
+                continue
+
+            # Only include recipes where all products are in early game set
+            if not all(prod in self.early_game_items for prod in products):
+                continue
+
+            recipe = Recipe(
+                name=recipe_data['name'],
+                key_name=recipe_data['key_name'],
+                category=recipe_data['category'],
+                time=recipe_data['time'],
+                ingredients=ingredients,
+                products=products
+            )
+
+            # Store by main product
+            for product in products:
+                if product not in recipes_by_product:
+                    recipes_by_product[product] = recipe
+                    break
+
+        return recipes_by_product
 
     def _parse_buildings(self):
         """Parse building data"""
@@ -80,3 +155,57 @@ class SatisfactoryOptimizer:
     def _parse_miners(self):
         """Parse miner data"""
         return {m['key_name']: m for m in self.data.get('miners', [])}
+
+
+def calculate_production_chain(self, target_item, available_resources=None):
+    """Calculate the production chain for a target item with natural production rates"""
+    # Get the base recipe for the target item
+    if target_item not in self.recipes:
+        return {
+            'target': target_item,
+            'target_rate': 0,
+            'recipes_used': {},
+            'buildings_needed': defaultdict(float),
+            'raw_materials': defaultdict(float),
+            'power_consumption': 0,
+            'warnings': [f"No recipe found for {target_item}"],
+            'production_tree': None
+        }
+
+    # Get the natural output rate of one building
+    base_recipe = self.recipes[target_item]
+    base_output_rate = base_recipe.get_items_per_minute().get(target_item, 0)
+
+    chain = {
+        'target': target_item,
+        'target_rate': base_output_rate,
+        'recipes_used': {},
+        'buildings_needed': defaultdict(float),
+        'raw_materials': defaultdict(float),
+        'power_consumption': 0,
+        'warnings': [],
+        'production_tree': None
+    }
+
+    # Track items being processed to detect cycles
+    processing_stack = set()
+
+    def build_production_tree(item, rate, depth=0, path=None):
+        # Tree building logic here
+        pass
+
+    # Build the production tree starting with natural output rate
+    chain['production_tree'] = build_production_tree(target_item, base_output_rate)
+
+    # Calculate resource node requirements if provided
+    if available_resources:
+        chain['resource_nodes_needed'] = self._calculate_resource_nodes(
+            chain['raw_materials'], available_resources
+        )
+
+    return chain
+
+
+def _calculate_resource_nodes(self, raw_materials, available_resources):
+    """Calculate resource node utilization"""
+    # Implementation here
